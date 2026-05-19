@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIESS AUTO | ECU Tuning & Online File Service</title>
+  <meta name="description" content="RIESS AUTO professional ECU & TCU tuning, Stage 1, Stage 2, DPF/EGR/AdBlue solutions, pops & bangs, bench and boot file service in UAE." />
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;background:#070707;color:#fff;line-height:1.6}
+    body[dir="rtl"]{font-family:Tahoma,Arial,sans-serif}
+    a{text-decoration:none;color:inherit}
+    .container{width:92%;max-width:1180px;margin:auto}
+    header{position:fixed;top:0;width:100%;z-index:10;background:rgba(0,0,0,.75);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .logo{font-size:26px;font-weight:800;letter-spacing:2px}.logo span{color:#e50914}
+    .nav-links{display:flex;gap:26px;font-size:14px;color:#ddd;align-items:center}.nav-links a:hover{color:#e50914}
+    .lang-btn{background:#fff;color:#000;border:0;border-radius:999px;padding:9px 14px;font-weight:800;cursor:pointer}
+    .hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(90deg,#050505 0%,rgba(5,5,5,.9) 45%,rgba(5,5,5,.45)),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;padding-top:90px}
+    body[dir="rtl"] .hero{background:linear-gradient(270deg,#050505 0%,rgba(5,5,5,.9) 45%,rgba(5,5,5,.45)),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat}
+    .badge{display:inline-block;background:rgba(229,9,20,.15);border:1px solid rgba(229,9,20,.45);color:#fff;padding:8px 14px;border-radius:999px;margin-bottom:18px;font-weight:700}
+    .hero h1{font-size:clamp(40px,7vw,82px);line-height:1.05;margin-bottom:22px;text-transform:uppercase}.hero h1 span{color:#e50914}
+    body[dir="rtl"] .hero h1{text-transform:none}
+    .hero p{max-width:680px;color:#d8d8d8;font-size:18px;margin-bottom:30px}.buttons{display:flex;gap:15px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:14px 24px;border-radius:8px;font-weight:700;transition:.25s}.btn-red{background:#e50914}.btn-red:hover{background:#b90810}.btn-outline{border:1px solid #fff}.btn-outline:hover{background:#fff;color:#000}
+    section{padding:85px 0}.title{text-align:center;margin-bottom:45px}.title h2{font-size:38px;text-transform:uppercase}.title p{color:#aaa;margin-top:8px}
+    body[dir="rtl"] .title h2{text-transform:none}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#111;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .card h3{font-size:22px;margin-bottom:12px;color:#fff}.card p,.card li{color:#bbb;font-size:15px}.card ul{padding-left:18px;margin-top:10px}body[dir="rtl"] .card ul{padding-right:18px;padding-left:0}
+    .accent{color:#e50914;font-weight:800}.stats{background:#0e0e0e}.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}.stat{padding:25px;background:#151515;border-radius:16px}.stat h3{font-size:34px;color:#e50914}.stat p{color:#aaa}
+    .about{background:#090909;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+    .about-box{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}.about-card{background:#111;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px}.about-card p{color:#bbb;margin-top:12px}
+    .upload{background:linear-gradient(135deg,#111,#050505);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+    .upload-box{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}.form{background:#101010;padding:28px;border-radius:18px;border:1px solid rgba(255,255,255,.1)}
+    input,textarea,select{width:100%;padding:14px;margin-bottom:14px;border-radius:8px;border:1px solid #333;background:#050505;color:#fff}textarea{height:120px}.small{font-size:13px;color:#888;margin-top:10px}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{background:#111;padding:25px;border-radius:16px;border:1px solid rgba(255,255,255,.08)}.step b{display:block;color:#e50914;font-size:26px;margin-bottom:10px}.step p{color:#bbb}
+    footer{background:#020202;padding:40px 0;border-top:1px solid rgba(255,255,255,.08);color:#aaa}.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.whatsapp{position:fixed;right:18px;bottom:18px;background:#25D366;color:#000;padding:14px 18px;border-radius:999px;font-weight:800;z-index:20;box-shadow:0 8px 25px rgba(0,0,0,.4)}
+    body[dir="rtl"] .whatsapp{right:auto;left:18px}
+    @media(max-width:850px){.nav-links a{display:none}.grid,.upload-box,.process,.stat-grid,.about-box{grid-template-columns:1fr}.hero h1{font-size:44px}section{padding:60px 0}.logo{font-size:22px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container"><nav><div class="logo">RIESS <span>AUTO</span></div><div class="nav-links"><a href="#services" data-en="Services" data-ar="الخدمات">Services</a><a href="#online" data-en="Online File Service" data-ar="تعديل الملفات أونلاين">Online File Service</a><a href="#process" data-en="Process" data-ar="طريقة العمل">Process</a><a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a><button class="lang-btn" onclick="toggleLang()" id="langBtn">AR</button></div></nav></div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="badge" data-en="United Arab Emirates • Professional ECU Solutions" data-ar="الإمارات العربية المتحدة • حلول احترافية لبرمجة السيارات">United Arab Emirates • Professional ECU Solutions</div>
+      <h1 data-en="Professional <span>ECU Tuning</span><br> & File Service" data-ar="برمجة احترافية <span>للكمبيوتر</span><br> وتعديل ملفات السيارات">Professional <span>ECU Tuning</span><br> & File Service</h1>
+      <p data-en="Stage 1, Stage 2, TCU tuning, DPF/EGR/AdBlue solutions, pops & bangs, bench and boot ECU reading support for workshops and car owners." data-ar="خدمات Stage 1 وStage 2، برمجة القير TCU/DSG، حلول DPF/EGR/AdBlue، بوب بانج، وقراءة ملفات ECU عن طريق OBD أو Bench أو Boot للكراجات وأصحاب السيارات.">Stage 1, Stage 2, TCU tuning, DPF/EGR/AdBlue solutions, pops & bangs, bench and boot ECU reading support for workshops and car owners.</p>
+      <div class="buttons"><a class="btn btn-red" href="https://wa.me/971547833415" target="_blank" data-en="WhatsApp Now" data-ar="تواصل واتساب">WhatsApp Now</a><a class="btn btn-outline" href="#online" data-en="Send Your File" data-ar="أرسل ملف السيارة">Send Your File</a></div>
+    </div>
+  </section>
+
+  <section class="about"><div class="container"><div class="about-box"><div><h2 data-en="RIESS AUTO" data-ar="رييس أوتو">RIESS AUTO</h2><p style="color:#bbb;margin-top:14px" data-en="RIESS AUTO is part of RIESS GENERAL TRADING in the United Arab Emirates. We provide professional ECU tuning, diagnostics support and online file modification services for workshops and car owners." data-ar="RIESS AUTO تابعة لشركة RIESS GENERAL TRADING في دولة الإمارات العربية المتحدة. نقدم خدمات برمجة ECU، دعم التشخيص، وتعديل ملفات السيارات أونلاين للكراجات وأصحاب السيارات.">RIESS AUTO is part of RIESS GENERAL TRADING in the United Arab Emirates. We provide professional ECU tuning, diagnostics support and online file modification services for workshops and car owners.</p></div><div class="about-card"><h3 data-en="Fast Online Support" data-ar="دعم سريع أونلاين">Fast Online Support</h3><p data-en="Send your original file with vehicle details. We review the request and reply with the best safe solution and price." data-ar="أرسل الملف الأصلي مع تفاصيل السيارة. نراجع الطلب ونرسل لك أفضل حل آمن مع السعر.">Send your original file with vehicle details. We review the request and reply with the best safe solution and price.</p></div></div></div></section>
+
+  <section id="services"><div class="container"><div class="title"><h2 data-en="Our Services" data-ar="خدماتنا">Our Services</h2><p data-en="Reliable tuning solutions for petrol and diesel vehicles" data-ar="حلول برمجة موثوقة لسيارات البنزين والديزل">Reliable tuning solutions for petrol and diesel vehicles</p></div><div class="grid">
+    <div class="card"><h3 data-en="ECU Remapping" data-ar="تعديل برمجة ECU">ECU Remapping</h3><p data-en="Custom Stage 1 and Stage 2 tuning for better power, torque, throttle response and driving performance." data-ar="برمجة Stage 1 وStage 2 مخصصة لزيادة القوة والعزم وتحسين استجابة الدعسة والأداء.">Custom Stage 1 and Stage 2 tuning for better power, torque, throttle response and driving performance.</p><ul><li data-en="Stage 1 safe tune" data-ar="Stage 1 آمن">Stage 1 safe tune</li><li data-en="Stage 2 performance tune" data-ar="Stage 2 للأداء">Stage 2 performance tune</li><li data-en="Torque limiter calibration" data-ar="تعديل محددات العزم">Torque limiter calibration</li></ul></div>
+    <div class="card"><h3 data-en="Diesel Solutions" data-ar="حلول سيارات الديزل">Diesel Solutions</h3><p data-en="Professional diesel calibration services for workshops with clean and reliable file modifications." data-ar="خدمات تعديل ملفات الديزل للكراجات بطريقة نظيفة وموثوقة.">Professional diesel calibration services for workshops with clean and reliable file modifications.</p><ul><li data-en="DPF solutions" data-ar="حلول DPF">DPF solutions</li><li data-en="EGR solutions" data-ar="حلول EGR">EGR solutions</li><li data-en="AdBlue / SCR solutions" data-ar="حلول AdBlue / SCR">AdBlue / SCR solutions</li><li data-en="Smoke calibration support" data-ar="دعم تقليل الدخان">Smoke calibration support</li></ul></div>
+    <div class="card"><h3 data-en="Petrol Performance" data-ar="أداء سيارات البنزين">Petrol Performance</h3><p data-en="Performance tuning for turbo petrol cars including GTI, Golf R, Audi, BMW, Mercedes and more." data-ar="برمجة أداء للسيارات البنزين التيربو مثل GTI وGolf R وAudi وBMW وMercedes وغيرها.">Performance tuning for turbo petrol cars including GTI, Golf R, Audi, BMW, Mercedes and more.</p><ul><li data-en="Pops & bangs" data-ar="بوب بانج">Pops & bangs</li><li data-en="Raised RPM limiter" data-ar="رفع RPM limiter">Raised RPM limiter</li><li data-en="Launch control support" data-ar="دعم Launch Control">Launch control support</li></ul></div>
+    <div class="card"><h3 data-en="TCU / DSG Tuning" data-ar="برمجة TCU / DSG">TCU / DSG Tuning</h3><p data-en="Gearbox tuning support for faster shifts, improved torque limits and better driving feel." data-ar="دعم برمجة القير لتبديلات أسرع ورفع محددات العزم وتحسين إحساس القيادة.">Gearbox tuning support for faster shifts, improved torque limits and better driving feel.</p></div>
+    <div class="card"><h3 data-en="Bench & Boot Support" data-ar="دعم Bench وBoot">Bench & Boot Support</h3><p data-en="ECU reading and writing support using OBD, bench and boot methods for locked or protected ECUs." data-ar="قراءة وكتابة ECU عن طريق OBD أو Bench أو Boot للكمبيوترات المقفلة أو المحمية.">ECU reading and writing support using OBD, bench and boot methods for locked or protected ECUs.</p></div>
+    <div class="card"><h3 data-en="Workshop File Service" data-ar="خدمة ملفات للكراجات">Workshop File Service</h3><p data-en="Online file modification service for garages. Send the original file and receive a tuned file with support." data-ar="خدمة تعديل ملفات أونلاين للكراجات. أرسل الملف الأصلي واستلم الملف المعدل مع الدعم.">Online file modification service for garages. Send the original file and receive a tuned file with support.</p></div>
+  </div></div></section>
+
+  <section class="stats"><div class="container"><div class="stat-grid"><div class="stat"><h3>UAE</h3><p data-en="Based in Emirates" data-ar="داخل الإمارات">Based in Emirates</p></div><div class="stat"><h3>ECU</h3><p data-en="Reading & writing" data-ar="قراءة وكتابة">Reading & writing</p></div><div class="stat"><h3>TCU</h3><p data-en="Gearbox tuning" data-ar="برمجة القير">Gearbox tuning</p></div><div class="stat"><h3>Online</h3><p data-en="Fast file service" data-ar="تعديل ملفات سريع">Fast file service</p></div></div></div></section>
+
+  <section id="online" class="upload"><div class="container"><div class="upload-box"><div><h2 data-en="Online File Service" data-ar="تعديل الملفات أونلاين">Online File Service</h2><p style="color:#bbb;margin:18px 0" data-en="Send your original ECU file with vehicle details and required service. Our team will review your request and reply with price, expected result and delivery time." data-ar="أرسل ملف ECU الأصلي مع تفاصيل السيارة والخدمة المطلوبة. نراجع الطلب ونرد عليك بالسعر والنتيجة المتوقعة ووقت التسليم.">Send your original ECU file with vehicle details and required service. Our team will review your request and reply with price, expected result and delivery time.</p><p><span class="accent" data-en="Important:" data-ar="مهم:">Important:</span> <span data-en="Always keep a backup of the original file before writing any modified file." data-ar="احتفظ دائمًا بنسخة احتياطية من الملف الأصلي قبل كتابة أي ملف معدل.">Always keep a backup of the original file before writing any modified file.</span></p></div><form class="form" action="mailto:info@riessauto.com" method="post" enctype="text/plain"><input name="Name" placeholder="Your Name / Workshop Name" required><input name="Phone" placeholder="WhatsApp Number" required><input name="Vehicle" placeholder="Vehicle: Golf GTI 2015 / ECU type"><select name="Service"><option>Stage 1 ECU Tune</option><option>Stage 2 Tune</option><option>DPF / EGR / AdBlue Solution</option><option>Pops & Bangs</option><option>TCU / DSG Tune</option><option>Other Service</option></select><textarea name="Request" placeholder="Write your request here..."></textarea><button class="btn btn-red" type="submit" style="border:0;width:100%" data-en="Send Request by Email" data-ar="أرسل الطلب بالإيميل">Send Request by Email</button><p class="small" data-en="For file upload, contact us on WhatsApp or email: info@riessauto.com" data-ar="لرفع الملفات، تواصل معنا على واتساب أو الإيميل: info@riessauto.com">For file upload, contact us on WhatsApp or email: info@riessauto.com</p></form></div></div></section>
+
+  <section id="process"><div class="container"><div class="title"><h2 data-en="How It Works" data-ar="طريقة العمل">How It Works</h2><p data-en="Simple process for workshops and customers" data-ar="خطوات بسيطة للكراجات والعملاء">Simple process for workshops and customers</p></div><div class="process"><div class="step"><b>01</b><h3 data-en="Read File" data-ar="قراءة الملف">Read File</h3><p data-en="Read ECU file by OBD, bench or boot." data-ar="قراءة ملف ECU عن طريق OBD أو Bench أو Boot.">Read ECU file by OBD, bench or boot.</p></div><div class="step"><b>02</b><h3 data-en="Send Details" data-ar="إرسال التفاصيل">Send Details</h3><p data-en="Send car model, ECU info and required service." data-ar="أرسل نوع السيارة ومعلومات ECU والخدمة المطلوبة.">Send car model, ECU info and required service.</p></div><div class="step"><b>03</b><h3 data-en="File Modify" data-ar="تعديل الملف">File Modify</h3><p data-en="We prepare the requested tuning solution." data-ar="نجهز لك التعديل المطلوب على الملف.">We prepare the requested tuning solution.</p></div><div class="step"><b>04</b><h3 data-en="Write & Test" data-ar="الكتابة والتجربة">Write & Test</h3><p data-en="Write the tuned file and test the vehicle safely." data-ar="اكتب الملف المعدل وجرب السيارة بأمان.">Write the tuned file and test the vehicle safely.</p></div></div></div></section>
+
+  <footer id="contact"><div class="container"><div class="footer-grid"><div><div class="logo">RIESS <span>AUTO</span></div><p data-en="Professional ECU & TCU tuning solutions" data-ar="حلول احترافية لبرمجة ECU وTCU">Professional ECU & TCU tuning solutions</p><p data-en="Established in 2024" data-ar="تأسست سنة 2024">Established in 2024</p></div><div><p><b>Email:</b> info@riessauto.com</p><p><b>Website:</b> www.riessauto.com</p><p><b>WhatsApp 1:</b> +971 54 783 3415</p><p><b>WhatsApp 2:</b> +971 50 114 4765</p><p><b data-en="Location:" data-ar="الموقع:">Location:</b> <span data-en="United Arab Emirates" data-ar="الإمارات العربية المتحدة">United Arab Emirates</span></p></div></div></div></footer>
+  <a class="whatsapp" href="https://wa.me/971547833415" target="_blank" data-en="WhatsApp" data-ar="واتساب">WhatsApp</a>
+
+  <script>
+    let currentLang = 'en';
+    function setLang(lang){
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute(lang === 'ar' ? 'data-ar' : 'data-en');
+      });
+      document.getElementById('langBtn').innerText = lang === 'ar' ? 'EN' : 'AR';
+    }
+    function toggleLang(){ setLang(currentLang === 'en' ? 'ar' : 'en'); }
+  </script>
+</body>
+</html>
