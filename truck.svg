@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0" stop-color="#050506"/>
+      <stop offset=".52" stop-color="#14161c"/>
+      <stop offset="1" stop-color="#060607"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24272f"/>
+      <stop offset=".45" stop-color="#0a0b0f"/>
+      <stop offset="1" stop-color="#4f535b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".62" cy=".42" r=".6">
+      <stop offset="0" stop-color="#ff1828" stop-opacity=".55"/>
+      <stop offset=".38" stop-color="#ff1828" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#ff1828" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="carbon" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="12" height="24" fill="#11131a"/>
+      <rect x="12" width="12" height="24" fill="#07080b"/>
+    </pattern>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1000" height="650" fill="url(#bg)"/>
+  <rect width="1000" height="650" fill="url(#carbon)" opacity=".36"/>
+  <circle cx="650" cy="340" r="360" fill="url(#glow)"/>
+  <g opacity=".28" stroke="#ff1828" stroke-width="2">
+    <path d="M90 120 H390 M610 120 H910 M130 560 H470 M600 560 H890"/>
+    <path d="M120 90 V560 M880 95 V560"/>
+  </g>
+  <g filter="url(#blur)" opacity=".45"><ellipse cx="500" cy="535" rx="350" ry="40" fill="#ff1828"/></g>
+
+        <rect x="160" y="330" width="460" height="160" rx="18" fill="url(#metal)" stroke="#ff1828" stroke-width="3"/>
+        <rect x="620" y="370" width="190" height="120" rx="12" fill="#0b0d12" stroke="#ff1828" stroke-width="3"/>
+        <rect x="675" y="390" width="78" height="46" rx="5" fill="#151923"/>
+        <circle cx="270" cy="515" r="48" fill="#050506" stroke="#ff1828" stroke-width="8"/>
+        <circle cx="700" cy="515" r="48" fill="#050506" stroke="#ff1828" stroke-width="8"/>
+
+  <text x="56" y="86" font-family="Arial Black,Arial" font-size="42" fill="#fff">TRUCK TUNING</text>
+  <text x="58" y="132" font-family="Arial" font-size="24" fill="#c6c8d0">Commercial Diesel ECU Optimization</text>
+</svg>
