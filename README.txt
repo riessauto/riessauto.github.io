@@ -1,0 +1,1 @@
+Upload index.html to GitHub Pages root. This version uses real external photos via Unsplash Source and CSS logo, no black logo background placeholders.
