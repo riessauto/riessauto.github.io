@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{let b=document.querySelector('.menu'),l=document.querySelector('.links');if(b&&l)b.onclick=()=>l.classList.toggle('open')});

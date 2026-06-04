@@ -1,0 +1,1 @@
+Upload all files/folders to riessauto.com website root. Submit sitemap.xml in Google Search Console.
