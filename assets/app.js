@@ -1,11 +1,8 @@
-document.addEventListener('DOMContentLoaded',()=>{let b=document.querySelector('.menu'),l=document.querySelector('.links');if(b&&l)b.onclick=()=>l.classList.toggle('open')});document.addEventListener('click', function(e) {
-  var link = e.target.closest('a[href^="tel:"]');
-  if (!link) return;
+document.addEventListener('DOMContentLoaded', () => {
+  const b = document.querySelector('.menu');
+  const l = document.querySelector('.links');
 
-  var phone = link.getAttribute('href');
-
-  document.addEventListener('DOMContentLoaded',()=>{
-  let b=document.querySelector('.menu'),
-      l=document.querySelector('.links');
-  if(b&&l) b.onclick=()=>l.classList.toggle('open');
+  if (b && l) {
+    b.onclick = () => l.classList.toggle('open');
+  }
 });
